@@ -1,0 +1,28 @@
+server:
+    port: 8080
+
+spring:
+  datasource:
+    url:  jdbc:h2:tcp://localhost/~/clc
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 500 #SQL IN절을 사용해서 컬렉션을 한번에 조회한다. 보통 100 ~ 1000이 적당.
+    
+  devtools:
+    restart:
+      enabled: false
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    # org.hibernate.type: trace

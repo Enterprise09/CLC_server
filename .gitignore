@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### database config ###
+/src/main/java/com/example/clc/clc_server/config

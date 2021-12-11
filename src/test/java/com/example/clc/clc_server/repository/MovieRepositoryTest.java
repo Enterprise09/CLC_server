@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import javax.transaction.Transactional;
 
-import com.example.clc.clc_server.domain.Genres;
+import com.example.clc.clc_server.domain.Genre;
+import com.example.clc.clc_server.domain.GenreType;
 import com.example.clc.clc_server.domain.Movie;
 
 import org.junit.jupiter.api.Test;
@@ -24,25 +25,26 @@ public class MovieRepositoryTest {
 
     @Autowired
     private MovieRepository movieRepository;
-    
+
     @Test
-    void mytest(){
-        Movie movie = Movie.builder().description_full("this is desc").rating(100).build();
+    void mytest() {
+        Movie movie = Movie.builder().summary("this is desc").title("this is test").build();
         assertNotEquals(movie, null);
         assertNotEquals(movie.getGenres(), null);
-        
-        movie.getGenres().add(Genres.ACTION);
-        movie.getGenres().add(Genres.COMEDY);
+
+        movie.getGenres().add(new Genre(GenreType.ACTION));
+        movie.getGenres().add(new Genre(GenreType.COMEDY));
 
         movieRepository.save(movie);
         Long movieId = movie.getId();
         log.info("movie id : " + movieId);
-        
-        Movie result = movieRepository.findById(movieId).get();
-        assertEquals(movie, result);
 
-        for(Genres s : result.getGenres()){
-            log.info(s.toString());
+        Movie result = movieRepository.findById(movieId);
+        assertEquals(movie, result);
+        assertEquals("this is desc", movie.getSummary());
+
+        for (Genre s : result.getGenres()) {
+            log.info(s.getGenre().toString());
         }
 
     }

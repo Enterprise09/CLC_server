@@ -1,3 +1,4 @@
+https://yts.mx/api/v2/list_movies.json
 {
     "status": "ok",
     "status_message": "Query was successful",
@@ -9,43 +10,124 @@
             {
                 "id": 38435,
                 "url": "https://yts.mx/movies/mr-saturday-night-2021",
+                "imdb_code": "tt15721532",
                 "title": "Mr. Saturday Night",
                 "title_english": "Mr. Saturday Night",
                 "title_long": "Mr. Saturday Night (2021)",
                 "slug": "mr-saturday-night-2021",
                 "year": 2021,
+                "rating": 0,
+                "runtime": 83,
                 "genres": [
                     "Documentary"
                 ],
                 "summary": "The untold story of Robert Stigwood and how he amped the disco era.",
                 "description_full": "The untold story of Robert Stigwood and how he amped the disco era.",
                 "synopsis": "The untold story of Robert Stigwood and how he amped the disco era.",
+                "yt_trailer_code": "",
+                "language": "en",
+                "mpa_rating": "",
                 "background_image": "https://yts.mx/assets/images/movies/mr_saturday_night_2021/background.jpg",
+                "background_image_original": "https://yts.mx/assets/images/movies/mr_saturday_night_2021/background.jpg",
+                "small_cover_image": "https://yts.mx/assets/images/movies/mr_saturday_night_2021/small-cover.jpg",
                 "medium_cover_image": "https://yts.mx/assets/images/movies/mr_saturday_night_2021/medium-cover.jpg",
+                "large_cover_image": "https://yts.mx/assets/images/movies/mr_saturday_night_2021/large-cover.jpg",
+                "state": "ok",
+                "torrents": [
+                    {
+                        "url": "https://yts.mx/torrent/download/BE469D78F9E8D9D1EB46819254C8175BADE5973F",
+                        "hash": "BE469D78F9E8D9D1EB46819254C8175BADE5973F",
+                        "quality": "720p",
+                        "type": "web",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "756.83 MB",
+                        "size_bytes": 793593774,
+                        "date_uploaded": "2021-12-10 08:17:38",
+                        "date_uploaded_unix": 1639120658
+                    },
+                    {
+                        "url": "https://yts.mx/torrent/download/8FB334A72E11F2BBDA11BE620523239D005DACA0",
+                        "hash": "8FB334A72E11F2BBDA11BE620523239D005DACA0",
+                        "quality": "1080p",
+                        "type": "web",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "1.52 GB",
+                        "size_bytes": 1632087572,
+                        "date_uploaded": "2021-12-10 09:15:16",
+                        "date_uploaded_unix": 1639124116
+                    }
+                ],
+                "date_uploaded": "2021-12-10 08:17:38",
+                "date_uploaded_unix": 1639120658
             },
             {
                 "id": 38434,
                 "url": "https://yts.mx/movies/famous-2021",
+                "imdb_code": "tt10054778",
                 "title": "Famous",
                 "title_english": "Famous",
                 "title_long": "Famous (2021)",
                 "slug": "famous-2021",
                 "year": 2021,
+                "rating": 0,
+                "runtime": 110,
                 "genres": [
                     "Drama"
                 ],
                 "summary": "Famous was filmed live on stage in the height of the #MeToo movement. Inspired by the lives of Young Hollywood stars like River Phoenix, Corey Feldman, Heath Ledger and Corey Haim, Famous takes you on a non-stop thrill ride behind the glamorous world of Young Hollywood and into the mind of A-list celebrity, Jason Mast. What appears to be a night of celebration for his first Oscar nomination, turns out to be an intricate plan to confront his past. Driven by a devastating need to expose the truth, Jason attempts to control the outcome of the evening and ignites a chain of events that pushes the boundaries of real friendship and reveals the true cost of fame. —Michael Leoni",
                 "description_full": "Famous was filmed live on stage in the height of the #MeToo movement. Inspired by the lives of Young Hollywood stars like River Phoenix, Corey Feldman, Heath Ledger and Corey Haim, Famous takes you on a non-stop thrill ride behind the glamorous world of Young Hollywood and into the mind of A-list celebrity, Jason Mast. What appears to be a night of celebration for his first Oscar nomination, turns out to be an intricate plan to confront his past. Driven by a devastating need to expose the truth, Jason attempts to control the outcome of the evening and ignites a chain of events that pushes the boundaries of real friendship and reveals the true cost of fame. —Michael Leoni",
                 "synopsis": "Famous was filmed live on stage in the height of the #MeToo movement. Inspired by the lives of Young Hollywood stars like River Phoenix, Corey Feldman, Heath Ledger and Corey Haim, Famous takes you on a non-stop thrill ride behind the glamorous world of Young Hollywood and into the mind of A-list celebrity, Jason Mast. What appears to be a night of celebration for his first Oscar nomination, turns out to be an intricate plan to confront his past. Driven by a devastating need to expose the truth, Jason attempts to control the outcome of the evening and ignites a chain of events that pushes the boundaries of real friendship and reveals the true cost of fame. —Michael Leoni",
+                "yt_trailer_code": "",
+                "language": "en",
+                "mpa_rating": "",
                 "background_image": "https://yts.mx/assets/images/movies/famous_2021/background.jpg",
+                "background_image_original": "https://yts.mx/assets/images/movies/famous_2021/background.jpg",
+                "small_cover_image": "https://yts.mx/assets/images/movies/famous_2021/small-cover.jpg",
                 "medium_cover_image": "https://yts.mx/assets/images/movies/famous_2021/medium-cover.jpg",
-        
+                "large_cover_image": "https://yts.mx/assets/images/movies/famous_2021/large-cover.jpg",
+                "state": "ok",
+                "torrents": [
+                    {
+                        "url": "https://yts.mx/torrent/download/4BCCDD586A5C7C666BB815C6CF3C208057295F5B",
+                        "hash": "4BCCDD586A5C7C666BB815C6CF3C208057295F5B",
+                        "quality": "720p",
+                        "type": "web",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "1.06 GB",
+                        "size_bytes": 1138166333,
+                        "date_uploaded": "2021-12-10 07:01:33",
+                        "date_uploaded_unix": 1639116093
+                    },
+                    {
+                        "url": "https://yts.mx/torrent/download/5C2EE286DCA201DFFC8EC42893275A662BF416CA",
+                        "hash": "5C2EE286DCA201DFFC8EC42893275A662BF416CA",
+                        "quality": "1080p",
+                        "type": "web",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "2.18 GB",
+                        "size_bytes": 2340757176,
+                        "date_uploaded": "2021-12-10 08:28:17",
+                        "date_uploaded_unix": 1639121297
+                    }
+                ],
+                "date_uploaded": "2021-12-10 07:01:33",
+                "date_uploaded_unix": 1639116093
             },
             {
                 "id": 38430,
                 "url": "https://yts.mx/movies/the-last-son-2021",
+                "imdb_code": "tt1800393",
                 "title": "The Last Son",
+                "title_english": "The Last Son",
+                "title_long": "The Last Son (2021)",
+                "slug": "the-last-son-2021",
                 "year": 2021,
+                "rating": 7.4,
+                "runtime": 96,
                 "genres": [
                     "Action",
                     "Drama",
@@ -54,8 +136,43 @@
                 "summary": "An outlaw attempts to end his evil family line.",
                 "description_full": "An outlaw attempts to end his evil family line.",
                 "synopsis": "An outlaw attempts to end his evil family line.",
+                "yt_trailer_code": "KilcySbvmP8",
+                "language": "en",
+                "mpa_rating": "R",
                 "background_image": "https://yts.mx/assets/images/movies/the_last_son_2021/background.jpg",
+                "background_image_original": "https://yts.mx/assets/images/movies/the_last_son_2021/background.jpg",
+                "small_cover_image": "https://yts.mx/assets/images/movies/the_last_son_2021/small-cover.jpg",
                 "medium_cover_image": "https://yts.mx/assets/images/movies/the_last_son_2021/medium-cover.jpg",
+                "large_cover_image": "https://yts.mx/assets/images/movies/the_last_son_2021/large-cover.jpg",
+                "state": "ok",
+                "torrents": [
+                    {
+                        "url": "https://yts.mx/torrent/download/A529368226AC19EA4DA815E24A28397CC01C9508",
+                        "hash": "A529368226AC19EA4DA815E24A28397CC01C9508",
+                        "quality": "720p",
+                        "type": "web",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "902.45 MB",
+                        "size_bytes": 946287411,
+                        "date_uploaded": "2021-12-10 06:45:10",
+                        "date_uploaded_unix": 1639115110
+                    },
+                    {
+                        "url": "https://yts.mx/torrent/download/5B322DB6D56D01513E6C265F96A2DF1D0D81A79B",
+                        "hash": "5B322DB6D56D01513E6C265F96A2DF1D0D81A79B",
+                        "quality": "1080p",
+                        "type": "web",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "1.81 GB",
+                        "size_bytes": 1943472701,
+                        "date_uploaded": "2021-12-10 07:42:01",
+                        "date_uploaded_unix": 1639118521
+                    }
+                ],
+                "date_uploaded": "2021-12-10 06:45:10",
+                "date_uploaded_unix": 1639115110
             },
             {
                 "id": 38431,
@@ -82,8 +199,37 @@
                 "background_image_original": "https://yts.mx/assets/images/movies/the_hating_game_2021/background.jpg",
                 "small_cover_image": "https://yts.mx/assets/images/movies/the_hating_game_2021/small-cover.jpg",
                 "medium_cover_image": "https://yts.mx/assets/images/movies/the_hating_game_2021/medium-cover.jpg",
+                "large_cover_image": "https://yts.mx/assets/images/movies/the_hating_game_2021/large-cover.jpg",
+                "state": "ok",
+                "torrents": [
+                    {
+                        "url": "https://yts.mx/torrent/download/6B58F04CB50F31BB621AE658DD017FCBFD2D8A67",
+                        "hash": "6B58F04CB50F31BB621AE658DD017FCBFD2D8A67",
+                        "quality": "720p",
+                        "type": "web",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "941.26 MB",
+                        "size_bytes": 986982646,
+                        "date_uploaded": "2021-12-10 06:46:23",
+                        "date_uploaded_unix": 1639115183
+                    },
+                    {
+                        "url": "https://yts.mx/torrent/download/ED92FA2B139E7FF2F3851E5FEA3D847C98F38456",
+                        "hash": "ED92FA2B139E7FF2F3851E5FEA3D847C98F38456",
+                        "quality": "1080p",
+                        "type": "web",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "1.89 GB",
+                        "size_bytes": 2029372047,
+                        "date_uploaded": "2021-12-10 07:45:20",
+                        "date_uploaded_unix": 1639118720
+                    }
+                ],
+                "date_uploaded": "2021-12-10 06:46:23",
+                "date_uploaded_unix": 1639115183
             },
-            /*****************************************************/
             {
                 "id": 38428,
                 "url": "https://yts.mx/movies/unusual-tales-1949",
@@ -111,6 +257,34 @@
                 "medium_cover_image": "https://yts.mx/assets/images/movies/unusual_tales_1949/medium-cover.jpg",
                 "large_cover_image": "https://yts.mx/assets/images/movies/unusual_tales_1949/large-cover.jpg",
                 "state": "ok",
+                "torrents": [
+                    {
+                        "url": "https://yts.mx/torrent/download/4FC5F23592BD7184A27411D62AC8EF9CCACB52B8",
+                        "hash": "4FC5F23592BD7184A27411D62AC8EF9CCACB52B8",
+                        "quality": "720p",
+                        "type": "bluray",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "812.38 MB",
+                        "size_bytes": 851842171,
+                        "date_uploaded": "2021-12-10 01:53:09",
+                        "date_uploaded_unix": 1639097589
+                    },
+                    {
+                        "url": "https://yts.mx/torrent/download/8329D723E4617E8BF5C07C3984B19BFC83927148",
+                        "hash": "8329D723E4617E8BF5C07C3984B19BFC83927148",
+                        "quality": "1080p",
+                        "type": "bluray",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "1.47 GB",
+                        "size_bytes": 1578400481,
+                        "date_uploaded": "2021-12-10 02:51:21",
+                        "date_uploaded_unix": 1639101081
+                    }
+                ],
+                "date_uploaded": "2021-12-10 01:53:09",
+                "date_uploaded_unix": 1639097589
             },
             {
                 "id": 38429,
@@ -138,6 +312,34 @@
                 "medium_cover_image": "https://yts.mx/assets/images/movies/road_to_sampo_1975/medium-cover.jpg",
                 "large_cover_image": "https://yts.mx/assets/images/movies/road_to_sampo_1975/large-cover.jpg",
                 "state": "ok",
+                "torrents": [
+                    {
+                        "url": "https://yts.mx/torrent/download/6E3BBA24DD2979E0A31705D1137C971E96C5F7F9",
+                        "hash": "6E3BBA24DD2979E0A31705D1137C971E96C5F7F9",
+                        "quality": "720p",
+                        "type": "bluray",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "916.35 MB",
+                        "size_bytes": 960862618,
+                        "date_uploaded": "2021-12-10 03:36:49",
+                        "date_uploaded_unix": 1639103809
+                    },
+                    {
+                        "url": "https://yts.mx/torrent/download/B5BE34C6E34C038230D6501B6D4883B155A17B6E",
+                        "hash": "B5BE34C6E34C038230D6501B6D4883B155A17B6E",
+                        "quality": "1080p",
+                        "type": "bluray",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "1.67 GB",
+                        "size_bytes": 1793148846,
+                        "date_uploaded": "2021-12-10 04:40:56",
+                        "date_uploaded_unix": 1639107656
+                    }
+                ],
+                "date_uploaded": "2021-12-10 03:36:49",
+                "date_uploaded_unix": 1639103809
             },
             {
                 "id": 38427,
@@ -166,6 +368,32 @@
                 "medium_cover_image": "https://yts.mx/assets/images/movies/freud_1962/medium-cover.jpg",
                 "large_cover_image": "https://yts.mx/assets/images/movies/freud_1962/large-cover.jpg",
                 "state": "ok",
+                "torrents": [
+                    {
+                        "url": "https://yts.mx/torrent/download/E1B33682D6AF4159366F06BD3E73C0E2311792B1",
+                        "hash": "E1B33682D6AF4159366F06BD3E73C0E2311792B1",
+                        "quality": "720p",
+                        "type": "bluray",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "1.26 GB",
+                        "size_bytes": 1352914698,
+                        "date_uploaded": "2021-12-10 02:23:30",
+                        "date_uploaded_unix": 1639099410
+                    },
+                    {
+                        "url": "https://yts.mx/torrent/download/DC0A03DAE5B2E73B4F5872FD6DECC95C6BA8D27B",
+                        "hash": "DC0A03DAE5B2E73B4F5872FD6DECC95C6BA8D27B",
+                        "quality": "1080p",
+                        "type": "bluray",
+                        "seeds": 0,
+                        "peers": 0,
+                        "size": "2.34 GB",
+                        "size_bytes": 2512555868,
+                        "date_uploaded": "2021-12-10 04:07:33",
+                        "date_uploaded_unix": 1639105653
+                    }
+                ],
                 "date_uploaded": "2021-12-10 02:23:30",
                 "date_uploaded_unix": 1639099410
             },

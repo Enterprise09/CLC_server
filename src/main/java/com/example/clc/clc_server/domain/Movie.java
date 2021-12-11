@@ -1,49 +1,46 @@
 package com.example.clc.clc_server.domain;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Embedded;
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Getter
 public class Movie {
 
     @Id @GeneratedValue
+    @Column(name = "movie_id")
     private Long id;
 
     private String url;
     private String title;
-    private String title_english;
-    private String title_long;
-    private String slug;
 
     private int year;
-    private int rating;
-    private int runtime;
 
+    @Lob
     private String summary;
-    private String description_full;
-    private String synopsis;
-    private String yt_trailer_code;
-    private String language;
-    private String mpa_rating;
-    private String background_image;
-    private String background_image_original;
-    private String small_cover_image;
-    private String medium_cover_image;
-    private String state;
-    private LocalDateTime date_uploaded;
 
-    @Embedded
+    private String background_image;
+    private String medium_cover_image;
+
+    @ElementCollection
+    @CollectionTable(name = "movie_genre", joinColumns = @JoinColumn(name="movie_id"))
     @Builder.Default
-    private List<Genres> genres = new ArrayList<>();
+    private List<Genre> genres = new ArrayList<>();
 }

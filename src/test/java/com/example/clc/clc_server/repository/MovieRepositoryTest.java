@@ -32,8 +32,8 @@ public class MovieRepositoryTest {
         assertNotEquals(movie, null);
         assertNotEquals(movie.getGenres(), null);
 
-        movie.getGenres().add(new Genre(GenreType.ACTION));
-        movie.getGenres().add(new Genre(GenreType.COMEDY));
+        movie.getGenres().add(Genre.createGenre(GenreType.Action, movie));
+        movie.getGenres().add(Genre.createGenre(GenreType.Comedy, movie));
 
         movieRepository.save(movie);
         Long movieId = movie.getId();

@@ -25,10 +25,13 @@ public class MovieRepository {
         return em.find(Movie.class, id);
     }
 
-    public List<Movie> findAll(int offset, int limit){
-        return em.createQuery("select m from Movie m", Movie.class)
+    public List<Movie> findMovies(int offset, int limit){
+        List<Movie> ret = em.createQuery("select m from Movie m", Movie.class)
         .setFirstResult(offset)
         .setMaxResults(limit)
         .getResultList();
+
+        return ret;
     }
+
 }

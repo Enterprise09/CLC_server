@@ -3,24 +3,27 @@ package com.example.clc.clc_server.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.transaction.Transactional;
-
-import com.example.clc.clc_server.domain.GenreType;
-import com.example.clc.clc_server.domain.GenreType;
 import com.example.clc.clc_server.domain.Movie;
 import com.example.clc.clc_server.repository.MovieRepository;
 
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
+@Transactional(readOnly = true)
 public class MovieService {
 
     private final MovieRepository movieRepository;
 
+    @Transactional
+    public Long save(Movie m){
+        return movieRepository.save(m);
+    }
+
+    @Transactional
     public List<Long> saveMovies(List<Movie> movies){
         List<Long> ids = new ArrayList<>();
 
@@ -37,7 +40,7 @@ public class MovieService {
     } 
 
     public List<Movie> findAll(int offset, int limit){
-        return movieRepository.findAll(offset, limit);
+        return movieRepository.findMovies(offset, limit);
     }
     
 }

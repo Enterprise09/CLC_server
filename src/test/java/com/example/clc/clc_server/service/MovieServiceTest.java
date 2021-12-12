@@ -1,10 +1,5 @@
 package com.example.clc.clc_server.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.transaction.Transactional;
-
 import com.example.clc.clc_server.domain.Genre;
 import com.example.clc.clc_server.domain.GenreType;
 import com.example.clc.clc_server.domain.Movie;
@@ -19,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-@Transactional
 @Slf4j
 public class MovieServiceTest {
     

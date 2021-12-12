@@ -3,7 +3,7 @@ package com.example.clc.clc_server.repository;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.clc.clc_server.domain.Genre;
 import com.example.clc.clc_server.domain.GenreType;

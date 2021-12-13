@@ -7,18 +7,44 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.core.io.ClassPathResource;
 
 public class JsonFetch {
 
     public static List<YtsMovie> parseJsonFromYts() throws IOException, JSONException {
+        // 택1
+        // return parseJsonFromURL();
+        return parseJsonFromFile();
+    }
+
+
+    private static List<YtsMovie> parseJsonFromFile() throws IOException, JSONException{
+        ClassPathResource resource = new ClassPathResource("yts.json");
+        Path path = Paths.get(resource.getURI());
+
+        byte[] bytes = Files.readAllBytes(path);
+        JSONObject ret = new JSONObject(new String(bytes, StandardCharsets.UTF_8));
+
+        return jsonToYtsMovieList(ret);
+    }
+
+    private static List<YtsMovie> parseJsonFromURL() throws IOException, JSONException {
         JSONObject result = readJsonFromUrl("https://yts.mx/api/v2/list_movies.json");
-        JSONObject data = result.getJSONObject("data");
+        return jsonToYtsMovieList(result);
+    }
+
+    private static List<YtsMovie> jsonToYtsMovieList(JSONObject json) throws IOException, JSONException {
+        JSONObject data = json.getJSONObject("data");
         int limit = data.getInt("limit");
 
         JSONArray movies = data.getJSONArray("movies");

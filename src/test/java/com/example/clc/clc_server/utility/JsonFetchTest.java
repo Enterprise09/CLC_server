@@ -8,6 +8,8 @@ import com.example.clc.clc_server.domain.Movie;
 import com.example.clc.clc_server.service.MovieService;
 
 import org.json.JSONException;
+import org.json.JSONObject;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +26,7 @@ public class JsonFetchTest {
     @Autowired
     MovieService movieService;
 
-    // @Test
+    @Test @Disabled
     void getGenreLists() throws IOException, JSONException {
         List<YtsMovie> parsedMovie = JsonFetch.parseJsonFromYts();
 
@@ -41,7 +43,7 @@ public class JsonFetchTest {
         log.info(genresString.toString());
     }
 
-    @Test
+    @Test @Disabled
     void dbinit() throws IOException, JSONException {
         List<YtsMovie> parsedMovie = JsonFetch.parseJsonFromYts();
 

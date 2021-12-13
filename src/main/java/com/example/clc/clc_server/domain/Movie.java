@@ -66,6 +66,7 @@ public class Movie {
 
 
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<Comment> comments = new ArrayList<>();
 
 

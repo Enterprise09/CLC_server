@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.example.clc.clc_server.domain.Movie;
+import com.example.clc.clc_server.dto.movie.MovieCommentDto;
 import com.example.clc.clc_server.dto.movie.MovieDto;
 import com.example.clc.clc_server.repository.MovieRepository;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
@@ -32,6 +34,12 @@ public class MovieController {
         List<Movie> movies = movieRepository.findMovies(0, 100);
         List<MovieDto> result = movies.stream().map(MovieDto::new).collect(Collectors.toList());
         return new Result<List<MovieDto>>(HttpStatus.OK, result);
+    }
+
+    @GetMapping("/api/v2/movie")
+    Result<MovieCommentDto> getMovieDto(@RequestParam Long id){
+        Movie m = movieRepository.findById(id);
+        return new Result<MovieCommentDto>(HttpStatus.OK, new MovieCommentDto(m));
     }
 
     @Data

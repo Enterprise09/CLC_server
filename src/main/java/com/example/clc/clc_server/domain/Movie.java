@@ -59,11 +59,17 @@ public class Movie {
     private String mediumCoverImage;
     private String largeCoverImage;
 
+    /* 연관관계 */
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     private List<Genre> genres = new ArrayList<>();
 
 
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
+    private List<Comment> comments = new ArrayList<>();
+
+
+    /* 생성 메서드 */
     public static Movie fromYtsMovie(YtsMovie ym){
         
         List<String> movieGenres = ym.getGenres();

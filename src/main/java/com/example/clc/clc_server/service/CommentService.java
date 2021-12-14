@@ -1,5 +1,8 @@
 package com.example.clc.clc_server.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.example.clc.clc_server.domain.Comment;
 import com.example.clc.clc_server.domain.Movie;
 import com.example.clc.clc_server.dto.comment.CommentRequestDto.RequestDeleteReviewDto;
@@ -12,17 +15,25 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
+@Slf4j
 public class CommentService {
 
     private final CommentRepository commentRepository;
     private final MovieRepository movieRepository;
 
-    public Comment getComment(Long id){
+    public Comment getComment(Long id) {
         return commentRepository.findById(id);
+    }
+
+    /* 임시.. 수정 필요! */
+    public List<Comment> getCommentsByMovie(Long movieId){
+        Movie movie = movieRepository.findById(movieId);
+        return movie.getComments();
     }
 
     @Transactional
@@ -34,18 +45,16 @@ public class CommentService {
     }
 
     @Transactional
-    public Long updateComment(RequestUpdateReviewDto dto){
+    public Long updateComment(RequestUpdateReviewDto dto) {
         Comment comment = commentRepository.findById(dto.getDocId());
-        String content = dto.getContent();
+        comment.updateContent(dto.getContent());
 
-        Comment updatedComment = Comment.createComment(comment.getId(), comment.getUserId(), comment.getUserPassword(),content,comment.getMovie());
-        commentRepository.save(updatedComment);
-
-        return updatedComment.getId();
+        commentRepository.save(comment);
+        return comment.getId();
     }
 
     @Transactional
-    public Long deleteComment(RequestDeleteReviewDto dto){
+    public Long deleteComment(RequestDeleteReviewDto dto) {
         Comment target = commentRepository.findById(dto.getDocId());
         return commentRepository.delete(target);
     }

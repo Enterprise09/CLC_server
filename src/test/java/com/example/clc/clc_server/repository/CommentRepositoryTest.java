@@ -17,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @Transactional
+@Slf4j
 public class CommentRepositoryTest {
     
     @Autowired
@@ -31,12 +32,16 @@ public class CommentRepositoryTest {
         Comment comment = Comment.createComment("test-id", "test-password", "Hello World!!", movie);
 
         movie.getComments().add(comment);
-        movieRepository.save(movie);
+        Long movieId = movieRepository.save(movie);
 
         Comment result = commentRepository.findById(comment.getId());
 
         assertEquals("test-id", result.getUserId());
         assertEquals("Hello World!!", result.getContent());
         assertEquals(movie.getTitle(), result.getMovie().getTitle());
+
+        movie = movieRepository.findById(movieId);
+        log.info(movie.getComments().get(0).getUserId());
+        assertEquals("test-id", movie.getComments().get(0).getUserId());
     }
 }

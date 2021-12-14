@@ -33,7 +33,7 @@ public class MovieServiceTest {
         log.info(result1.getTitle());
     }
 
-    private Movie createMovie(String url, String title, int year, String summary, String background_image,
+    public static Movie createMovie(String url, String title, int year, String summary, String background_image,
             String medium_cover_image, GenreType[] genreTypes) {
 
         Movie movie = Movie.builder().url(url).title(title).year(year).summary(summary)

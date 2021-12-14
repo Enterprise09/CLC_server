@@ -60,4 +60,8 @@ public class Comment {
         Comment ret = new Comment(id, userId, userPassword, content, movie);
         return ret;
     }
+
+    public void updateContent(String content){
+        this.content = content;
+    }
 }

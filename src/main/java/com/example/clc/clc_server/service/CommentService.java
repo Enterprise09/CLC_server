@@ -32,8 +32,10 @@ public class CommentService {
 
     /* 임시.. 수정 필요! */
     public List<Comment> getCommentsByMovie(Long movieId){
-        Movie movie = movieRepository.findById(movieId);
-        return movie.getComments();
+        // Movie movie = movieRepository.findById(movieId);
+        // return movie.getComments();
+
+        return commentRepository.findByMovieId(movieId);
     }
 
     @Transactional

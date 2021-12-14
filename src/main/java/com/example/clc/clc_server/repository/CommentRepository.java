@@ -5,7 +5,7 @@ import javax.persistence.EntityManager;
 import com.example.clc.clc_server.domain.Comment;
 
 import org.springframework.stereotype.Repository;
-
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 
 @Repository
@@ -17,6 +17,14 @@ public class CommentRepository {
     public Long save(Comment comment){
         em.persist(comment);
         return comment.getId();
+    }
+
+    public List<Comment> findByMovieId(Long movieId){
+        return em.createQuery(
+            "select c from Comment c where c.movie = :movieId", Comment.class
+        )
+        .setParameter("movieId", movieId)
+        .getResultList();
     }
 
     public Comment findById(Long id){

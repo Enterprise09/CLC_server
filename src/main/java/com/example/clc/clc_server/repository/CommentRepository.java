@@ -21,7 +21,7 @@ public class CommentRepository {
 
     public List<Comment> findByMovieId(Long movieId){
         return em.createQuery(
-            "select c from Comment c where c.movie = :movieId", Comment.class
+            "select c from Comment c where c.movie.id = :movieId", Comment.class
         )
         .setParameter("movieId", movieId)
         .getResultList();

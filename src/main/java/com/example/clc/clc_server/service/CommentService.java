@@ -1,13 +1,14 @@
 package com.example.clc.clc_server.service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.example.clc.clc_server.domain.Comment;
 import com.example.clc.clc_server.domain.Movie;
 import com.example.clc.clc_server.dto.comment.CommentRequestDto.RequestDeleteReviewDto;
 import com.example.clc.clc_server.dto.comment.CommentRequestDto.RequestSaveReviewDto;
 import com.example.clc.clc_server.dto.comment.CommentRequestDto.RequestUpdateReviewDto;
+import com.example.clc.clc_server.dto.comment.CommentResponseDto;
 import com.example.clc.clc_server.repository.CommentRepository;
 import com.example.clc.clc_server.repository.MovieRepository;
 
@@ -26,16 +27,14 @@ public class CommentService {
     private final CommentRepository commentRepository;
     private final MovieRepository movieRepository;
 
-    public Comment getComment(Long id) {
-        return commentRepository.findById(id);
+    public CommentResponseDto getComment(Long id) {
+        Comment result = commentRepository.findById(id);
+        return CommentResponseDto.fromComment(result);
     }
 
-    /* 임시.. 수정 필요! */
-    public List<Comment> getCommentsByMovie(Long movieId){
-        // Movie movie = movieRepository.findById(movieId);
-        // return movie.getComments();
-
-        return commentRepository.findByMovieId(movieId);
+    public List<CommentResponseDto> getCommentsByMovie(Long movieId){
+        List<Comment> result = commentRepository.findByMovieId(movieId);
+        return result.stream().map(CommentResponseDto::fromComment).collect(Collectors.toList());
     }
 
     @Transactional

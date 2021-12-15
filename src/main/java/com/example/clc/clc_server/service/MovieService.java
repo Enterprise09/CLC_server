@@ -7,6 +7,8 @@ import com.example.clc.clc_server.domain.Movie;
 import com.example.clc.clc_server.repository.MovieRepository;
 
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -36,7 +38,8 @@ public class MovieService {
     }
 
     public Movie findOne(Long id){
-        return movieRepository.findById(id);
+        Movie ret = movieRepository.findById(id);
+        return ret;
     } 
 
     public List<Movie> findAll(int offset, int limit){

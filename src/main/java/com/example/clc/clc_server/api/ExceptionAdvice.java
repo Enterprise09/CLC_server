@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ExceptionAdvice {
 
-    @ExceptionHandler(NullPointerException.class) 
+    @ExceptionHandler(NullPointerException.class)
     public String custom() { 
         return "this is nullpointer exception";
     }

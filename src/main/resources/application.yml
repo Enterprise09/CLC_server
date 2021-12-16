@@ -1,0 +1,29 @@
+server:
+    port: 8080
+
+spring:
+  datasource:
+    url:  jdbc:h2:tcp://localhost/~/clc
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create # 처음 실행시에는 create. 운용시에는 none
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 700 #SQL IN절을 사용해서 컬렉션을 한번에 조회한다. 보통 100 ~ 1000이 적당.
+    
+  devtools:
+    restart:
+      enabled: false # hot-relading 을 쓰고 싶다면 true로 설정.
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    # org.hibernate.type: trace

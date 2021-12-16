@@ -6,3 +6,5 @@ run test:
 intergrated : $mvn test
 specific class : $mvn test -Dtest="TheFirstUnitTest"
 single method : $mvn test -Dtest="TheSecondUnitTest#whenTestCase2_thenPrintTest2_1" 
+
+https://bcp0109.tistory.com/303

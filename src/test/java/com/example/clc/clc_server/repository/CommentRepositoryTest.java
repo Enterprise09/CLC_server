@@ -38,8 +38,8 @@ public class CommentRepositoryTest {
     @Test @Disabled
     void saveTest(){
         Movie movie = Movie.builder().title("this is movie").runtime(200).build();
-        Comment comment1 = Comment.createComment("test-id", "test-password", "Hello World!!", movie);
-        Comment comment2 = Comment.createComment("test-id", "test-password", "This is comment2", movie);
+        Comment comment1 = Comment.createComment("test-id", "test-password", "comment1", "Hello World!!", movie);
+        Comment comment2 = Comment.createComment("test-id", "test-password", "comment2", "This is comment2", movie);
 
         movie.getComments().add(comment1);
         movie.getComments().add(comment2);
@@ -59,8 +59,8 @@ public class CommentRepositoryTest {
     @Test @Disabled
     void getCommentListByMovie(){
         Movie movie = Movie.builder().title("this is movie2").runtime(200).build();
-        Comment comment1 = Comment.createComment("test-id", "test-password", "Hello World!!", movie);
-        Comment comment2 = Comment.createComment("test-id", "test-password", "This is comment2", movie);
+        Comment comment1 = Comment.createComment("test-id", "test-password", "comment1", "Hello World!!", movie);
+        Comment comment2 = Comment.createComment("test-id", "test-password", "comment2", "This is comment2", movie);
 
         movie.getComments().add(comment1);
         movie.getComments().add(comment2);

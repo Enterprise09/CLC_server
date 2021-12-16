@@ -9,23 +9,26 @@ public class CommentRequestDto {
         private Long movieId;
         private String id;
         private String pw;
+        private String title;
         private String content;
     }
 
     @Data
     public static class RequestUpdateReviewDto{
+        private String title;
         private String content;
+
         private Long docId;
         private Long movieId;
-        private String id;
-        private String pw;
+
+        // private String id;
+        // private String pw;
     }
 
     @Data
     public static class RequestDeleteReviewDto{
         private Long docId;
-        private Long movieId;
-        private String id;
-        private String pw;
+        // private String id;
+        // private String pw;
     }
 }

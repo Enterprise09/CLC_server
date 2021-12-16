@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.example.clc.clc_server.domain.Movie;
+import com.example.clc.clc_server.dto.movie.MovieCommentDto;
 import com.example.clc.clc_server.dto.movie.MovieDto;
 import com.example.clc.clc_server.exception.CustomException;
 import com.example.clc.clc_server.exception.ErrorCode;
@@ -50,7 +51,12 @@ public class MovieService {
         }
 
         return ret;
-    } 
+    }
+
+    public MovieCommentDto findOneToMovieCommentDto(Long id){
+        Movie result = findOne(id);
+        return new MovieCommentDto(result);
+    }
 
     public List<Movie> findAll(int offset, int limit){
         return movieRepository.findMovies(offset, limit);

@@ -38,7 +38,7 @@ public class MovieController {
 
     @GetMapping("/api/v2/movie")
     ResponseEntity<Result<MovieCommentDto>> getMovieDto(@RequestParam Long id){
-        Movie m = movieService.findOne(id);
-        return ResponseEntity.status(HttpStatus.OK).body(new Result<MovieCommentDto>(new MovieCommentDto(m)));
+        MovieCommentDto m = movieService.findOneToMovieCommentDto(id);
+        return ResponseEntity.status(HttpStatus.OK).body(new Result<MovieCommentDto>(m));
     }
 }

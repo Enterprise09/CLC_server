@@ -9,9 +9,10 @@ spring:
     driver-class-name: org.h2.Driver
 
   jpa:
+    open-in-view: false
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: create # 처음 실행시에는 create. 운용시에는 none
     properties:
       hibernate:
 #        show_sql: true
@@ -20,7 +21,7 @@ spring:
     
   devtools:
     restart:
-      enabled: false
+      enabled: false # hot-relading 을 쓰고 싶다면 true로 설정.
 
 logging:
   level:

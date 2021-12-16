@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
 
-@Component
+@Component // 운용환경에서는 처음 DB값이 잘 들어갔으면 주석처리해서 불필요한 데이터 삽입을 막기. 테스트 환경에서는 ddl-auto가 보통 create인데 db에 값을 매번 넣어주기 위해 그냥 둔다.
 @RequiredArgsConstructor
 public class InitDB {
     

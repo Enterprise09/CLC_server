@@ -23,8 +23,8 @@ public class JsonFetch {
 
     public static List<YtsMovie> parseJsonFromYts() throws IOException, JSONException {
         // 택1
-        // return parseJsonFromURL();
-        return parseJsonFromFile();
+        // return parseJsonFromURL(); //실제 yts 웹에서 가져오기
+        return parseJsonFromFile(); // resources/yts.json에서 가져오기
     }
 
 

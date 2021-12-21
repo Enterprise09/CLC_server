@@ -2,7 +2,6 @@ package com.example.clc.clc_server.api;
 
 import java.util.List;
 
-import com.example.clc.clc_server.domain.Movie;
 import com.example.clc.clc_server.dto.Result;
 import com.example.clc.clc_server.dto.movie.MovieCommentDto;
 import com.example.clc.clc_server.dto.movie.MovieDto;
@@ -21,13 +20,6 @@ import lombok.RequiredArgsConstructor;
 public class MovieController {
 
     private final MovieService movieService;
-
-    @GetMapping("/api/v1/movies")
-    ResponseEntity<Result<List<Movie>>> getMovieList() {
-        List<Movie> movies = movieService.findAll(0, 100);
-        return ResponseEntity.status(HttpStatus.OK).body(new Result<List<Movie>>(movies));
-    }
-
 
     @GetMapping("/api/v2/movies")
     ResponseEntity<Result<List<MovieDto>>> getMovieDtoList(){

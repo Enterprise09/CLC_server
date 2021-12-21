@@ -15,12 +15,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
 
-import lombok.extern.slf4j.Slf4j;
-
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @Transactional
-@Slf4j
 public class CommentRepositoryTest {
     
     @Autowired
@@ -52,7 +49,6 @@ public class CommentRepositoryTest {
         assertEquals(movie.getTitle(), result.getMovie().getTitle());
 
         movie = movieRepository.findById(movieId);
-        // log.info(movie.getComments().get(0).getUserId());
         assertEquals("test-id", movie.getComments().get(0).getUserId());
     }
 

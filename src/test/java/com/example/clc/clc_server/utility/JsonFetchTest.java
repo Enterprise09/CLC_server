@@ -8,7 +8,6 @@ import com.example.clc.clc_server.domain.Movie;
 import com.example.clc.clc_server.service.MovieService;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

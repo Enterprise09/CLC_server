@@ -11,6 +11,7 @@ import com.example.clc.clc_server.domain.Movie;
 import com.example.clc.clc_server.service.MovieService;
 import com.example.clc.clc_server.utility.JsonFetch;
 import com.example.clc.clc_server.utility.YtsMovie;
+import com.example.clc.clc_server.utility.JsonFetch.FETCH_SOURCE;
 
 import org.json.JSONException;
 import org.springframework.stereotype.Component;
@@ -32,7 +33,7 @@ public class InitDB {
         List<Movie> movies = new ArrayList<>();
         
         try{
-            List<YtsMovie> ytsMovies = JsonFetch.parseJsonFromYts();
+            List<YtsMovie> ytsMovies = JsonFetch.parseJsonFromYts(FETCH_SOURCE.FILE);
             movies = ytsMovies.stream().map(Movie::fromYtsMovie).collect(Collectors.toList());
 
         }catch(IOException | JSONException e){

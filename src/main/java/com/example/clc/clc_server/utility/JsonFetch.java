@@ -21,10 +21,18 @@ import org.springframework.core.io.ClassPathResource;
 
 public class JsonFetch {
 
-    public static List<YtsMovie> parseJsonFromYts() throws IOException, JSONException {
-        // 택1
-        // return parseJsonFromURL(); //실제 yts 웹에서 가져오기
-        return parseJsonFromFile(); // resources/yts.json에서 가져오기
+    public static enum FETCH_SOURCE{
+        WEB, FILE
+    }
+
+    public static List<YtsMovie> parseJsonFromYts(FETCH_SOURCE... sources) throws IOException, JSONException {
+
+        if(sources.length > 0 && sources[0] == FETCH_SOURCE.WEB){
+            return parseJsonFromURL(); //실제 yts 웹에서 가져오기
+        }
+        else{
+            return parseJsonFromFile(); // resources/yts.json에서 가져오기
+        }
     }
 
 

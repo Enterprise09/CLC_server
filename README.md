@@ -59,8 +59,8 @@
 src/main/resources/application.yml 파일을 잘 보자.
 
 #### * DDL-AUTO
-ddl-auto 가 true로 되어있으면, 서버가 켜질때마다 db 데이터가 날아가므로 주의가 필요하다. <br/>
-실제 운용시에는 ddl-auto를 none으로 설정하자.
+ddl-auto 가 `create`로 되어있으면, 서버가 켜질때마다 db 데이터가 날아가므로 주의가 필요하다. <br/>
+실제 운용시에는 ddl-auto를 `none`으로 설정하자.
 
 #### * DB 비밀번호
 알아서 설정하고, application.yml에 잘 넣어주기 바람.
